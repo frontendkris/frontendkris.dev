@@ -51,7 +51,7 @@ const PortfolioContent = () => {
             className='
               mt-0 m-auto opacity-0
               bg-gradient-to-b from-neutral-800 to-neutral-900 drop-shadow-2xl md:rounded-xl
-              w-[900px] max-w-full max-h-full h-full overflow-y-scroll no-scrollbar
+              w-[900px] max-w-full max-h-full h-full overflow-y-scroll overflow-x-hidden no-scrollbar
               z-50 animation-fade-in
             '
             onClick = {(event) => event.stopPropagation()}
