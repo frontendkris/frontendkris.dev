@@ -1,0 +1,22 @@
+---
+interface Props {
+  size: 1 | 2 | 3 | 4 | 5 | 6;
+  text: string;
+}
+
+const { size, text }: Props = Astro.props;
+const Element = `h${size}`;
+---
+
+<Element class:list={[
+  {'text-2xl': size === 1},
+  {'text-xl': size === 2},
+  {'text-lg': size > 2},
+  {'leading-tight': size >= 3},
+  {'leading-none': size < 3},
+  {'font-bold': size == 1},
+  {'font-medium': size > 1},
+  {'mb-2': size == 1 || size > 2},
+  {'mb-8': size == 2},
+  'max-w-max',
+]}>{text}</Element>

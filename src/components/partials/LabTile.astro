@@ -1,0 +1,41 @@
+---
+import type { Lab } from '../../data/lab';
+import Heading from './Heading.astro';
+import Description from './Description.astro';
+import { Icon } from "astro-icon";
+import { iconClass, linkAttrs } from '../SocialMedia.astro';
+
+const { thumbnail, title, type, github, codepen, demo } = Astro.props;
+---
+
+<div class="
+  flex flex-col gap-2
+">
+  <a href={!!codepen ? codepen : demo} class="flex flex-col items-start justify-start gap-4 hover:text-supernova-500 transition-colors" {...linkAttrs}>
+    <img src={thumbnail} alt={title} class="w-full aspect-square object-cover rounded-lg" loading="lazy" decoding="async" />
+    <Heading size={3} text={title} />
+  </a>
+  <div>
+    <!-- <Description text={type} className="uppercase" /> -->
+    <div class="flex items-center justify-start gap-2">
+      {
+        !!github &&
+        <a href={github} {...linkAttrs}>
+          <Icon name="mdi:github" class={iconClass} />
+        </a>
+      }
+      {
+        !!codepen &&
+        <a href={codepen} {...linkAttrs}>
+          <Icon name="mdi:codepen" class={iconClass} />
+        </a>
+      }
+      {
+        !!demo &&
+        <a href={demo} {...linkAttrs}>
+          <Icon name="mdi:link" class={iconClass} />
+        </a>
+      }
+    </div>
+  </div>
+</div>

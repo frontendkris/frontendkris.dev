@@ -1,0 +1,44 @@
+---
+  interface Props {
+    src: string;
+    direction: "top" | "bottom";
+    className?: string;
+  }
+
+  const { className, direction = 'top', src } = Astro.props;
+---
+<span class={`image-reveal ${direction} ${className}`}>
+  <slot />
+  <img src={src} class="image-reveal__image" />
+</span>
+
+<style is:global>
+  .image-reveal {
+    position: relative;
+    display: block;
+    max-width: max-content;
+  }
+  .image-reveal .image-reveal__image {
+    opacity: 0;
+    transition: all 250ms ease;
+    position: absolute;
+    left: 0;
+    height: auto;
+    width: auto;
+    min-width: 400px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .image-reveal.top .image-reveal__image {
+    top: -1rem;
+    transform: translateY(-100%);
+  }
+  .image-reveal.bottom .image-reveal__image {
+    bottom: -1rem;
+    transform: translateY(100%);
+  }
+  .image-reveal:hover .image-reveal__image {
+    opacity: 1;
+    filter: drop-shadow(0 1rem 1rem #000);
+  }
+</style>

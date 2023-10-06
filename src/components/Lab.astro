@@ -1,0 +1,18 @@
+---
+import Heading from "./partials/Heading.astro";
+import { data } from "../data/lab";
+import type { Lab } from "../data/lab";
+import LabTile from "./partials/LabTile.astro";
+import ImageReveal from "./partials/ImageReveal.astro";
+---
+
+<section>
+  <ImageReveal src="https://media.tenor.com/l4VXUXKwlREAAAAC/stephen-stephen-colbert.gif" direction="top">
+    <Heading size={2} text="Lab" />
+  </ImageReveal>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-8">
+    {
+      data.map((lab: Lab) => <LabTile {...lab} />)
+    }
+  </div>
+</section>

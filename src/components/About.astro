@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon";
+import ImageReveal from "./partials/ImageReveal.astro";
+import SocialMedia from "./SocialMedia.astro";
+import { iconClass } from "./SocialMedia.astro";
+---
+
+<div class="flex flex-col items-center gap-3 md:gap-0 text-gray-300 text-center">
+  <div class="flex justify-center gap-12 w-full mb-6">
+    <div class="flex items-center gap-2">
+      <Icon name="mdi:backpack" class={`${iconClass} hover:text-gray-300`} /> Available
+      <!-- <Icon name="mdi:location" class={`${iconClass} hover:text-gray-300`} /> Poznań, Poland -->
+    </div>
+    <SocialMedia />
+  </div>
+  <p>
+    I'm a frontend developer obsessed with releasing user dopamine.
+  </p>
+  <p>
+    A big fan of Codewars, Habitica and RPG games. And manga. And anime.
+  </p>
+  <p class="text-supernova-500">
+    <ImageReveal src="https://media.tenor.com/IRUsEZEZnlsAAAAC/lovemybaldhead-soold-ivegonebald.gif" direction="bottom">
+      But mostly of making your website more satisfying to use.
+    </ImageReveal>
+  </p>
+</div>

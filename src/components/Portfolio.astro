@@ -1,0 +1,35 @@
+---
+import Heading from "./partials/Heading.astro";
+import ImageReveal from "./partials/ImageReveal.astro";
+import PortfolioContent from "./PortfolioContent";
+---
+
+<section>
+  <ImageReveal src="https://media.tenor.com/zYF1bPnvi6IAAAAC/that-still-only-counts-as-one-lotr.gif" direction="top">
+    <Heading size={2} text="Websites Portfolio" />
+  </ImageReveal>
+  <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+    <PortfolioContent client:idle />
+  </div>
+</section>
+
+<style is:global>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scroll-horizontally {
+    mouse-wheel: horizontal;
+  }
+  .gallery {
+    mouse-wheel: horizontal;
+    scroll-snap-type: proximity;
+    scroll-behavior: smooth;
+  }
+  .gallery > * {
+    scroll-snap-align: start;
+  }
+</style>

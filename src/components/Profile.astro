@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon";
+import Heading from "./partials/Heading.astro";
+
+---
+
+<div class="flex flex-row items-center w-full md:max-w-max">
+  <div
+    class="w-16 h-16 md:w-20 md:h-20 min-w-max rounded-full bg-gray-300 mr-4 overflow-hidden"
+  >
+    <img
+      src="/kris.jpg"
+      alt="Krzysztof Król @frontendkris"
+      class="object-cover w-full h-full"
+    />
+  </div>
+  <div class="flex flex-col items-start">
+    <Heading size={1} text="Krzysztof Król" />
+    <p class="text-gray-300">Creative 🔥 Frontend Developer</p>
+  </div>
+</div>

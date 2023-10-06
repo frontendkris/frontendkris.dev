@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon";
+import { links } from "../data/links";
+
+export const iconClass = "h-7 w-7 hover:text-supernova-500 transition-colors";
+export const linkAttrs = {
+  target: "_blank",
+  rel: "noopener noreferrer nofollow",
+};
+---
+
+<div class="flex flex-row gap-2 items-center justify-center">
+  <a href={`mailto:${links.email}`} {...linkAttrs}>
+    <Icon name="mdi:email" class={iconClass} />
+  </a>
+  <a href={links.github} {...linkAttrs}>
+    <Icon name="mdi:github" class={iconClass} />
+  </a>
+  <a href={links.codepen} {...linkAttrs}>
+    <Icon name="mdi:codepen" class={iconClass} />
+  </a>
+  <!-- <a href={links.instagram} {...linkAttrs}>
+    <Icon name="mdi:instagram" class={iconClass} />
+  </a> -->
+  <!-- <a href={links.twitter} {...linkAttrs}>
+    <Icon name="mdi:twitter" class={iconClass} />
+  </a> -->
+  <a href={links.linkedin} {...linkAttrs}>
+    <Icon name="mdi:linkedin" class={iconClass} />
+  </a>
+</div>
