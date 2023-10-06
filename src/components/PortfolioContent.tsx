@@ -49,7 +49,7 @@ const PortfolioContent = () => {
           <div
             ref={popup}
             className='
-              md:mt-12 m-auto opacity-0
+              mt-0 m-auto opacity-0
               bg-gradient-to-b from-neutral-800 to-neutral-900 drop-shadow-2xl md:rounded-xl
               w-[900px] max-w-full max-h-full overflow-y-scroll no-scrollbar
               z-50 animation-fade-in
@@ -100,7 +100,7 @@ const PortfolioContent = () => {
                 )
               }
             </div>
-            <div className='flex flex-col gap-6 p-6 md:p-12'>
+            <div className='flex flex-col gap-6 p-6 pb-9 md:p-12'>
               <p className='text-gray-300 text-base md:text-lg m-0 max-w-max'>{activeProject.description}</p>
               <a
                 role="button"
