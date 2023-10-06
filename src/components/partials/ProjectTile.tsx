@@ -13,8 +13,8 @@ const ProjectTile = ({ openProjectPopup, project: { favicon, galleryImages, titl
         <img src={favicon ? favicon : galleryImages[0]} alt={title} className="flex items-center justify-center w-full h-full m-auto aspect-square object-cover" />
       </div>
       <div className="flex flex-col justify-start items-start w-full">
-        <h3 className='text-lg leading-tight font-medium mb-2 max-w-max group-hover:text-supernova-500 transition-colors'>{title}</h3>
-        <p className={`text-gray-300 text-sm m-0`}>{excerpt}</p>
+        <h3 className='text-lg leading-tight font-medium mb-1 max-w-max group-hover:text-supernova-500 transition-colors'>{title}</h3>
+        <p className={`text-gray-300 text-sm mb-2`}>{excerpt}</p>
         <p className={`text-gray-300 text-sm m-0`}>{!!company ? `at ${company}` : `freelance project`}</p>
       </div>
     </div>

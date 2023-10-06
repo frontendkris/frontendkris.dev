@@ -68,7 +68,7 @@ const PortfolioContent = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
               <h2 className="text-2xl leading-tight font-medium mb-0 max-w-max">{activeProject.title}</h2>
-              <p className='text-gray-300 text-sm m-0'>{activeProject.excerpt}</p>
+              <div className='text-gray-300 text-sm m-0'>{activeProject.excerpt}</div>
               {/* <p className='text-gray-300 text-sm m-0 max-w-max'>
                 {!!activeProject.company ? `Project realized for ${activeProject.company}` : `Freelance project`}
               </p> */}
@@ -101,7 +101,7 @@ const PortfolioContent = () => {
               }
             </div>
             <div className='flex flex-col gap-6 p-6 pt-12 pb-9 md:p-12'>
-              <p className='text-gray-300 text-base md:text-lg m-0 max-w-max'>{activeProject.description}</p>
+              <p className='text-gray-300 text-base md:text-lg m-0 max-w-max md:whitespace-pre-line md:leading-loose'>{activeProject.description}</p>
               <a
                 role="button"
                 href={activeProject.link}

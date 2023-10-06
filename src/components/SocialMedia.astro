@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon";
 import { links } from "../data/links";
 
-export const iconClass = "h-5 w-5 sm:h-7 sm:w-7 hover:text-supernova-500 transition-colors";
+export const iconClass = "h-5 w-5 sm:h-7 sm:w-7 transition-colors group-hover:text-supernova-500";
 export const linkAttrs = {
   target: "_blank",
   rel: "noopener noreferrer nofollow",
@@ -10,22 +10,22 @@ export const linkAttrs = {
 ---
 
 <div class="flex flex-row gap-2 items-center justify-center">
-  <a href={`mailto:${links.email}`} {...linkAttrs}>
+  <a href={`mailto:${links.email}`} {...linkAttrs} class="group">
     <Icon name="mdi:email" class={iconClass} />
   </a>
-  <a href={links.github} {...linkAttrs}>
+  <a href={links.github} {...linkAttrs} class="group">
     <Icon name="mdi:github" class={iconClass} />
   </a>
-  <a href={links.codepen} {...linkAttrs}>
+  <a href={links.codepen} {...linkAttrs} class="group">
     <Icon name="mdi:codepen" class={iconClass} />
   </a>
-  <!-- <a href={links.instagram} {...linkAttrs}>
+  <!-- <a href={links.instagram} {...linkAttrs} class="group">
     <Icon name="mdi:instagram" class={iconClass} />
   </a> -->
-  <!-- <a href={links.twitter} {...linkAttrs}>
+  <!-- <a href={links.twitter} {...linkAttrs} class="group">
     <Icon name="mdi:twitter" class={iconClass} />
   </a> -->
-  <a href={links.linkedin} {...linkAttrs}>
+  <a href={links.linkedin} {...linkAttrs} class="group">
     <Icon name="mdi:linkedin" class={iconClass} />
   </a>
 </div>

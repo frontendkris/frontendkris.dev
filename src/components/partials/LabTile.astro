@@ -20,19 +20,19 @@ const { thumbnail, title, type, github, codepen, demo } = Astro.props;
     <div class="flex items-center justify-start gap-2">
       {
         !!github &&
-        <a href={github} {...linkAttrs}>
+        <a href={github} {...linkAttrs} class="group">
           <Icon name="mdi:github" class={iconClass} />
         </a>
       }
       {
         !!codepen &&
-        <a href={codepen} {...linkAttrs}>
+        <a href={codepen} {...linkAttrs} class="group">
           <Icon name="mdi:codepen" class={iconClass} />
         </a>
       }
       {
         !!demo &&
-        <a href={demo} {...linkAttrs}>
+        <a href={demo} {...linkAttrs} class="group">
           <Icon name="mdi:link" class={iconClass} />
         </a>
       }
