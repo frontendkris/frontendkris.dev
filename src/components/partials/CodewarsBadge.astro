@@ -3,9 +3,9 @@ import { links } from "../../data/links";
 import ImageReveal from "./ImageReveal.astro";
 ---
 
-<a href={links.codewars} target="_blank" rel="nofollow">
-  <ImageReveal src="https://media.tenor.com/vTTrRYC_EPIAAAAd/son-goku-kakarott.gif" direction="bottom" className="flex flex-col items-end justify-end">
-    <span class="mr-3 italic text-sm text-supernova-300 mb-2">Join me on Codewars!</span>
+<a href={links.codewars} target="_blank" rel="nofollow" class="">
+  <ImageReveal src="https://media.tenor.com/vTTrRYC_EPIAAAAd/son-goku-kakarott.gif" direction="bottom" className="flex flex-col items-end justify-end text-right">
+    <div class="mr-3 mb-2 italic text-sm text-supernova-300">Join me on Codewars!</div>
     <img src={`${links.codewars}/badges/large`} />
   </ImageReveal>
 </a>

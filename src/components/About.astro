@@ -6,11 +6,13 @@ import { iconClass } from "./SocialMedia.astro";
 ---
 
 <div class="flex flex-col items-center gap-3 md:gap-0 text-gray-300 text-center">
-  <div class="flex justify-center gap-12 w-full mb-6">
-    <div class="flex items-center gap-2">
+  <div class="flex justify-center flex-wrap gap-x-12 gap-y-4 w-full mb-6">
+    <div class="flex items-center gap-1">
       <Icon name="mdi:backpack" class={`${iconClass} hover:text-gray-300`} /> Available
-      <!-- <Icon name="mdi:location" class={`${iconClass} hover:text-gray-300`} /> Poznań, Poland -->
     </div>
+    <!-- <div class="flex items-center gap-1">
+      <Icon name="mdi:location" class={`${iconClass} hover:text-gray-300`} /> Poznań, Poland
+    </div> -->
     <SocialMedia />
   </div>
   <p>
