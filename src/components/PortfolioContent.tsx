@@ -51,12 +51,12 @@ const PortfolioContent = () => {
             className='
               mt-0 m-auto opacity-0
               bg-gradient-to-b from-neutral-800 to-neutral-900 drop-shadow-2xl md:rounded-xl
-              w-[900px] max-w-full max-h-full overflow-y-scroll no-scrollbar
+              w-[900px] max-w-full max-h-full h-full overflow-y-scroll no-scrollbar
               z-50 animation-fade-in
             '
             onClick = {(event) => event.stopPropagation()}
           >
-            <div className='relative flex flex-col gap-6 p-6 pb-6 md:p-12'>
+            <div className='relative flex flex-col gap-3 p-6 pb-6 md:p-12'>
               <svg
                 onClick={closeProjectPopup}
                 xmlns="http://www.w3.org/2000/svg" 
@@ -73,7 +73,7 @@ const PortfolioContent = () => {
                 {!!activeProject.company ? `Project realized for ${activeProject.company}` : `Freelance project`}
               </p> */}
             </div>
-            <div className="flex flex-nowrap overflow-x-scroll no-scrollbar px-6 md:px-12 mb-6">
+            <div className="flex flex-nowrap overflow-x-scroll no-scrollbar px-6 md:px-12 md:-mt-6 mb-12">
               {
                 activeProject.technologies.map((tech: string) =>
                 <div
@@ -100,7 +100,7 @@ const PortfolioContent = () => {
                 )
               }
             </div>
-            <div className='flex flex-col gap-6 p-6 pb-9 md:p-12'>
+            <div className='flex flex-col gap-6 p-6 pt-12 pb-9 md:p-12'>
               <p className='text-gray-300 text-base md:text-lg m-0 max-w-max'>{activeProject.description}</p>
               <a
                 role="button"

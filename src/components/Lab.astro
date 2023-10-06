@@ -10,7 +10,7 @@ import ImageReveal from "./partials/ImageReveal.astro";
   <ImageReveal src="https://media.tenor.com/l4VXUXKwlREAAAAC/stephen-stephen-colbert.gif" direction="top">
     <Heading size={2} text="Lab" />
   </ImageReveal>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-8">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-x-12 md:gap-y-8">
     {
       data.map((lab: Lab) => <LabTile {...lab} />)
     }
