@@ -2,13 +2,13 @@ import type { Project } from '../../data/portfolio';
 import type { MouseEventHandler } from 'react';
 
 export type ProjectTileProps = {
-  handleTileClick: MouseEventHandler<HTMLDivElement>;
+  openProjectPopup: MouseEventHandler<HTMLDivElement>;
   project: Project;
 }
 
-const ProjectTile = ({ handleTileClick, project: { favicon, galleryImages, title, excerpt, company } }: ProjectTileProps) => {
+const ProjectTile = ({ openProjectPopup, project: { favicon, galleryImages, title, excerpt, company } }: ProjectTileProps) => {
   return (
-    <div className="flex gap-x-4 cursor-pointer group" onClick={handleTileClick}>
+    <div className="flex gap-x-4 cursor-pointer group" onClick={openProjectPopup}>
       <div className="w-12 h-12 min-w-max bg-white aspect-square overflow-hidden rounded">
         <img src={favicon ? favicon : galleryImages[0]} alt={title} className="flex items-center justify-center w-full h-full m-auto aspect-square object-cover" />
       </div>

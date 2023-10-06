@@ -1,13 +1,24 @@
-import { useState, } from 'react';
+import { useRef, useState, } from 'react';
 import type { Project } from '../data/portfolio';
 import { portfolio } from '../data/portfolio';
 import ProjectTile from './partials/ProjectTile';
 
 const PortfolioContent = () => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const overlay = useRef<HTMLDivElement>(null);
+  const popup = useRef<HTMLDivElement>(null);
 
-  const handleTileClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, project: Project): void => {
+  const openProjectPopup = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, project: Project): void => {
     setActiveProject(project);
+  }
+
+  const closeProjectPopup = (e: React.MouseEvent<any, MouseEvent>): void => {
+    popup.current?.classList.add("animation-fade-out");
+    overlay.current?.classList.add("animation-blur-out");
+    
+    setTimeout(() => {
+      setActiveProject(null);
+    }, 300);
   }
 
   return (
@@ -19,31 +30,43 @@ const PortfolioContent = () => {
             <ProjectTile
               key={project.title}
               project={project}
-              handleTileClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => handleTileClick(e, { ...project })}
+              openProjectPopup={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => openProjectPopup(e, { ...project })}
             />
           ))
       }
       {
         !!activeProject &&
         <div
-          onClick={() => setActiveProject(null)}
+          ref={overlay}
+          onClick={closeProjectPopup}
           className='
             fixed inset-0
             flex items-center justify-center
             backdrop-blur-sm transition-all
-            z-40
+            z-40 animation-blur-in
           '
         >
           <div
+            ref={popup}
             className='
-              md:mt-12
+              md:mt-12 m-auto opacity-0
               bg-gradient-to-b from-neutral-800 to-neutral-900 drop-shadow-2xl md:rounded-xl
               w-[900px] max-w-full max-h-full overflow-y-scroll no-scrollbar
-              m-auto z-50
+              z-50 animation-fade-in
             '
             onClick = {(event) => event.stopPropagation()}
           >
-            <div className='flex flex-col gap-6 p-6 pb-3 md:p-12'>
+            <div className='relative flex flex-col gap-6 p-6 pb-6 md:p-12'>
+              <svg
+                onClick={closeProjectPopup}
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                strokeWidth={1.5} 
+                stroke="currentColor" 
+                className="w-6 h-6 absolute right-6 top-6 md:right-12 md:top-12 cursor-pointer hover:text-supernova-500 transition-colors">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
               <h2 className="text-2xl leading-tight font-medium mb-0 max-w-max">{activeProject.title}</h2>
               <p className='text-gray-300 text-sm m-0'>{activeProject.excerpt}</p>
               {/* <p className='text-gray-300 text-sm m-0 max-w-max'>
@@ -61,7 +84,7 @@ const PortfolioContent = () => {
                 </div>)
               }
             </div>
-            <div className="flex flex-nowrap gap-x-4 w-full overflow-x-scroll scroll-smooth gallery scroll-horizontally no-scrollbar px-6 md:px-12">
+            <div className="animation-slide-left flex flex-nowrap gap-x-4 w-full overflow-x-scroll scroll-smooth gallery scroll-horizontally no-scrollbar px-6 md:px-12">
               {
                 activeProject.galleryImages.map((image: string) =>
                   <div
