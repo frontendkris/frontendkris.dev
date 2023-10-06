@@ -1,4 +1,4 @@
-export type FrontendTech = "TypeScript" | "JavaScript" | "React" | "Preact" | "Next.js" | "Astro JS" | "Svelte" | "HTML" | "Twig";
+export type FrontendTech = "TypeScript" | "JavaScript" | "React" | "Redux" | "Preact" | "Next.js" | "Astro JS" | "Svelte" | "HTML" | "Twig";
 export type BackendTech = "Express.js" | "Deno" | "Node.js" | "PHP";
 export type StylingTech = "CSS" | "SCSS" | "Tailwind CSS" | "Bootstrap" | "Material UI" | "Daisy UI" | "Styled Components";
 export type CMS = "WordPress" | "ACF" | "WooCommerce" | "Sylius";
@@ -22,10 +22,15 @@ export type Project = {
 export const portfolio: Project[] = [
   {
     "title": "Agronomist",
-    "description": "Redesign and Maintenance of Agronomist.pl – a 4-year project. I was responsible for redesign and maintenance.",
-    "excerpt": "Teamwork of redesign and maintenance",
+    "excerpt": "Redesign and maintenance",
+    "description": `Agronomist is a portal providing tools and informations in the field of agriculture.
+      Work on the project was carried out in a two-person team.
+      The main task was to redesign the website and improve its performance.
+      I took the opportunity to refactor most of the code of the modified components.
+      I was also responsible for implementing a package with reusable components.
+    `,
     "link": "https://agronomist.pl/",
-    "technologies": ["React", "Styled Components", "SCSS"],
+    "technologies": ["React", "TypeScript", "Redux", "Styled Components", "SCSS"],
     "active": true,
     "galleryImages": [
       "/projects/agronomist-1.png",
@@ -40,8 +45,11 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Mygift.pl",
-    "description": "Teamwork of a visual product personalizator",
-    "excerpt": "Partial creation of a visual product personalizator",
+    "excerpt": "Visual product personalizator and admin panel",
+    "description": `Product personalizator allows you to modify a product with your own graphics and texts.
+      Work on the project was carried out in a two-person team.
+      I was responsible for layout and components of the visual product personalizator and administration panel.
+    `,
     "link": "https://mygift.pl/kreator/",
     "technologies": ["Next.js", "MongoDB", "Daisy UI", "Tailwind CSS"],
     "active": true,
@@ -57,8 +65,12 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Trzech Kumpli",
-    "description": "A multilanguage website for brewery company",
-    "excerpt": "Website for Trzech Kumpli company.",
+    "excerpt": "A multilanguage website of brewery company",
+    "description": `Trzech Kumpli is an award-winning brewery creating craft beers.
+      The website is multilingual, displays all the products and has a blog.
+      I was responsible for the implementation of the website and its maintenance.
+      Project was dropped by other developer at the beginning and I was asked to finish it.
+    `,
     "link": "https://trzechkumpli.pl/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "MySQL", "JavaScript"],
     "active": true,
@@ -78,8 +90,14 @@ export const portfolio: Project[] = [
   },
   {
     "title": "abagard.pl",
-    "description": "SEO-focused website for obtaining Google rankings for tiler company.",
-    "excerpt": "Abagard.pl website with SEO focus.",
+    "excerpt": "Portfolio website for tiler company and SEO",
+    "description": `Abagard is a local business based in Poznań that provides tiling services.
+      The website was created to present the company and improve its visibility at Google.
+      Due to inflation and the war, the company stopped getting orders.
+      I was responsible for the implementation of the website and SEO actions.
+      Now the company has work planned for a year ahead thanks to my positioning at Google.
+      He acquires customers not through recommendations as before, but from the Internet.
+    `,
     "link": "https://abagard.pl",
     "technologies": ["Astro JS", "React", "Tailwind CSS", "SCSS"],
     "active": true,
@@ -95,8 +113,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "adwokatwysocki.pl",
-    "description": "",
     "excerpt": "AdwokatWysocki.pl website with SEO focus.",
+    "description": "",
     "link": "https://adwokatwysocki.pl",
     "technologies": ["Astro JS", "React", "Tailwind CSS", "SCSS"],
     "active": false,
@@ -111,8 +129,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Novavis Group",
-    "description": "Company website for Novavis Group.",
     "excerpt": "Creating a full website with unique features",
+    "description": "Company website for Novavis Group.",
     "link": "https://novavisgroup.pl/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "MySQL", "JavaScript"],
     "active": true,
@@ -128,8 +146,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Lema 3D",
-    "description": "A multilanguage website for the Lema3D company.",
     "excerpt": "Website for Lema3D company.",
+    "description": "A multilanguage website for the Lema3D company.",
     "link": "https://lema3d.pl/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "MySQL", "JavaScript"],
     "active": false,
@@ -145,8 +163,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Mediderm",
-    "description": "A website for the Mediderm company.",
     "excerpt": "Website for MediDerm company.",
+    "description": "A website for the Mediderm company.",
     "link": "https://mediderm.help/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "MySQL", "JavaScript"],
     "active": false,
@@ -163,8 +181,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Vistula",
-    "description": "A project for Vistula University.",
     "excerpt": "Landing page",
+    "description": "A project for Vistula University.",
     "link": "https://pultusk.vistula.edu.pl/landingpage/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "MySQL", "JavaScript"],
     "active": true,
@@ -181,8 +199,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Glass System",
-    "description": "Company website with product catalog.",
     "excerpt": "Website for Academy Asseco company.",
+    "description": "Company website with product catalog.",
     "link": "https://glasssystem.com/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "Twig", "MySQL", "JavaScript"],
     "active": true,
@@ -199,8 +217,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "academy.asseco.pl",
-    "description": "A project for Academy Asseco company.",
     "excerpt": "Website for Academy Asseco company.",
+    "description": "A project for Academy Asseco company.",
     "link": "https://academy.asseco.pl/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "Twig", "MySQL", "JavaScript"],
     "active": true,
@@ -217,8 +235,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "lindnerLab.pl",
-    "description": "A minimalist website project.",
     "excerpt": "Minimalist website LindnerLab.pl.",
+    "description": "A minimalist website project.",
     "link": "https://lindnerlab.pl",
     "technologies": ["WordPress", "ACF", "SCSS", "PHP", "Twig", "MySQL", "JavaScript"],
     "active": false,
@@ -234,8 +252,8 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Nawmar",
-    "description": "A project for Nawmar company.",
     "excerpt": "Website for Nawmar company.",
+    "description": "A project for Nawmar company.",
     "link": "http://www.nawmar.pl/",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "active": false,
