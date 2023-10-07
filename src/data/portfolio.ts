@@ -45,7 +45,7 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Mygift.pl",
-    "excerpt": "Visual product personalizator and admin panel",
+    "excerpt": "Visual product personalizator",
     "description": `Product personalizator allows you to modify a product with your own graphics and texts.
       Work on the project was carried out in a two-person team.
       I was responsible for layout and components of the visual product personalizator and administration panel.
@@ -65,7 +65,7 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Trzech Kumpli",
-    "excerpt": "A multilanguage website of brewery company",
+    "excerpt": "Product catalog with blog",
     "description": `Trzech Kumpli is an award-winning brewery creating craft beers.
       The website is multilingual, displays all the products and has a blog.
       I was responsible for the implementation of the website and its maintenance.
@@ -90,7 +90,7 @@ export const portfolio: Project[] = [
   },
   {
     "title": "abagard.pl",
-    "excerpt": "Portfolio website for tiler company and SEO",
+    "excerpt": "Portfolio website and positioning",
     "description": `Abagard is a local business based in Poznań that provides tiling services.
       The website was created to present the company and improve its visibility at Google.
       Due to inflation and the war, the company stopped getting orders.

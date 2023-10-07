@@ -2,14 +2,14 @@
 import { Icon } from "astro-icon";
 import { links } from "../data/links";
 
-export const iconClass = "h-5 w-5 sm:h-7 sm:w-7 transition-colors group-hover:text-supernova-500";
+export const iconClass = "h-7 w-7 transition-colors group-hover:text-supernova-500";
 export const linkAttrs = {
   target: "_blank",
   rel: "noopener noreferrer nofollow",
 };
 ---
 
-<div class="flex flex-row gap-2 items-center justify-center">
+<div class="flex flex-row gap-4 items-center justify-center">
   <a href={`mailto:${links.email}`} {...linkAttrs} class="group">
     <Icon name="mdi:email" class={iconClass} />
   </a>

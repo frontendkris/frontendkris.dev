@@ -3,7 +3,6 @@
 import Layout from '../layouts/Layout.astro';
 import About from '../components/About.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Portfolio from '../components/Portfolio.astro';
 import Lab from '../components/Lab.astro';
 
@@ -17,10 +16,9 @@ const handleTabChange = (e: any) => {
   title="Krzysztof Król - Creative 🔥 Frontend Developer"
 >
   <Header />
-  <About />
-	<main class="flex flex-col gap-16 mt-16 pb-24" data-active-tab="1">
+	<main class="flex flex-col gap-12 md:gap-16 md:mt-16 pb-24">
+    <About />
     <Portfolio />
     <Lab />
 	</main>
-  <!-- <Footer /> -->
 </Layout>

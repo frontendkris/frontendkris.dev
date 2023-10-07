@@ -3,27 +3,18 @@ import { Icon } from "astro-icon";
 import ImageReveal from "./partials/ImageReveal.astro";
 import SocialMedia from "./SocialMedia.astro";
 import { iconClass } from "./SocialMedia.astro";
+import CodewarsBadge from "./partials/CodewarsBadge.astro";
 ---
 
-<div class="flex flex-col items-center gap-3 md:gap-0 text-gray-300 text-center">
-  <div class="flex justify-center flex-wrap gap-x-12 gap-y-4 w-full mb-6">
+<div class="flex flex-col items-center gap-6 text-gray-300 text-center">
+  <div class="flex justify-between md:justify-center md:gap-x-12 gap-y-4 w-full">
     <div class="flex items-center gap-1">
       <Icon name="mdi:backpack" class={`${iconClass} hover:text-gray-300`} /> Available
     </div>
-    <!-- <div class="flex items-center gap-1">
-      <Icon name="mdi:location" class={`${iconClass} hover:text-gray-300`} /> Poznań, Poland
-    </div> -->
     <SocialMedia />
   </div>
-  <p>
-    I'm a frontend developer obsessed with releasing user dopamine.
-  </p>
-  <p>
-    A big fan of Codewars, Habitica and RPG games. And manga. And anime.
-  </p>
-  <p class="text-supernova-500">
-    <ImageReveal src="https://media.tenor.com/IRUsEZEZnlsAAAAC/lovemybaldhead-soold-ivegonebald.gif" direction="bottom">
-      But mostly of making your website more satisfying to use.
-    </ImageReveal>
-  </p>
+  <ImageReveal src="https://media.tenor.com/IRUsEZEZnlsAAAAC/lovemybaldhead-soold-ivegonebald.gif" direction="bottom" className="text-supernova-500">
+    I create things that make users smile,<br>
+    making them thinking about you, coming back and choosing you.
+  </ImageReveal>
 </div>
