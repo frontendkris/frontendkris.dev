@@ -2,6 +2,7 @@ import { useRef, useState, } from 'react';
 import type { Project } from '../data/portfolio';
 import { portfolio } from '../data/portfolio';
 import ProjectTile from './partials/ProjectTile';
+import ScrollContainer from 'react-indiana-drag-scroll'
 
 const PortfolioContent = () => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
@@ -73,7 +74,7 @@ const PortfolioContent = () => {
                 {!!activeProject.company ? `Project realized for ${activeProject.company}` : `Freelance project`}
               </p> */}
             </div>
-            <div className="flex flex-nowrap overflow-x-scroll no-scrollbar px-6 md:px-12 md:-mt-6 mb-12">
+            <ScrollContainer className="flex flex-nowrap overflow-x-scroll no-scrollbar px-6 md:px-12 md:-mt-6 mb-12">
               {
                 activeProject.technologies.map((tech: string) =>
                 <div
@@ -83,8 +84,8 @@ const PortfolioContent = () => {
                   {tech}
                 </div>)
               }
-            </div>
-            <div className="animation-slide-left flex flex-nowrap gap-x-4 w-full overflow-x-scroll scroll-smooth gallery scroll-horizontally no-scrollbar px-6 md:px-12">
+            </ScrollContainer>
+            <ScrollContainer className="animation-slide-left flex flex-nowrap gap-x-4 w-full overflow-x-scroll scroll-smooth gallery scroll-horizontally no-scrollbar px-6 md:px-12">
               {
                 activeProject.galleryImages.map((image: string) =>
                   <div
@@ -102,7 +103,7 @@ const PortfolioContent = () => {
                   </div>
                 )
               }
-            </div>
+            </ScrollContainer>
             <div className='flex flex-col gap-6 p-6 pt-12 pb-9 md:p-12'>
               <p className='text-gray-300 text-base md:text-lg m-0 max-w-max md:whitespace-pre-line md:leading-loose'>{activeProject.description}</p>
               <a
