@@ -91,11 +91,14 @@ const PortfolioContent = () => {
                     key={`${activeProject.title}-${image}`}
                     className='w-full min-w-full lg:min-w-[80%] h-auto lg:h-96 bg-neutral-950 lg:py-8 aspect-auto rounded-lg'
                   >
-                    <img
-                      src={image}
-                      alt={activeProject.title}
-                      className='flex items-center justify-center w-full h-full m-auto object-contain rounded'
-                    />
+                    <picture>
+                      <img
+                        loading='lazy'
+                        src={image}
+                        alt={activeProject.title}
+                        className='flex items-center justify-center w-full h-full m-auto object-contain rounded'
+                      />
+                    </picture>
                   </div>
                 )
               }

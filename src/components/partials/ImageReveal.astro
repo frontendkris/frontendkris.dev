@@ -9,7 +9,7 @@
 ---
 <span class={`image-reveal ${direction} ${className}`}>
   <slot />
-  <img src={src} class="image-reveal__image" />
+  <img loading="lazy" src={src} class="image-reveal__image" />
 </span>
 
 <style is:global>
