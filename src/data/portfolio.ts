@@ -139,7 +139,7 @@ export const portfolio: Project[] = [
       "/projects/novavis-2.png",
       "/projects/novavis-3.png",
     ],
-    "favicon": "/projects/novavis-icon.png",
+    "favicon": "/projects/novavis-icon.webp",
     "company": "KERRIS",
     "type": "commercial",
     "year": 2023,
