@@ -112,10 +112,9 @@ const PortfolioContent = () => {
                 rel="nofollow"
                 className='
                   flex px-16 py-2 max-w-max
-                  bg-neutral-700 hover:bg-neutral-600
-                  border border-neutral-700
-                  rounded-lg text-base text-gray-300
-                  transition-all
+                  bg-neutral-800 hover:bg-neutral-700
+                  rounded-lg text-base text-white font-bold
+                  transition-all shadow-lg
                 '>Visit</a>
             </div>
           </div>
