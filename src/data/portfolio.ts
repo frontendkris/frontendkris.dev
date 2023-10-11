@@ -23,11 +23,9 @@ export const portfolio: Project[] = [
   {
     "title": "Agronomist",
     "excerpt": "Redesign and maintenance",
-    "description": `Agronomist is a portal providing tools and informations in the field of agriculture.
-      Work on the project was carried out in a two-person team.
-      The main task was to redesign the website and improve its performance.
-      I took the opportunity to refactor most of the code of the modified components.
-      I was also responsible for implementing a package with reusable components.
+    "description": `Agronomist is a portal providing tools and informations in the field of agriculture. Work on the project was carried out in a two-person team.
+      
+      The main task was to redesign the website and improve its performance. I took the opportunity to refactor most of the code of the modified components. I was also responsible for implementing a package with reusable components.
     `,
     "link": "https://agronomist.pl/",
     "technologies": ["React", "TypeScript", "Redux", "Styled Components", "SCSS"],
@@ -44,11 +42,11 @@ export const portfolio: Project[] = [
     "year": 2023,
   },
   {
-    "title": "Mygift.pl",
+    "title": "Mygift",
     "excerpt": "Visual product personalizator",
-    "description": `Product personalizator allows you to modify a product with your own graphics and texts.
-      Work on the project was carried out in a two-person team.
-      I was responsible for layout and components of the visual product personalizator and administration panel.
+    "description": `Product personalizator allows you to modify a product with your own graphics and texts. Work on the project was carried out in a two-person team.
+      
+      I was responsible for the layout, the components of the visual product personalization system, and the administration panel.
     `,
     "link": "https://mygift.pl/kreator/",
     "technologies": ["Next.js", "MongoDB", "Daisy UI", "Tailwind CSS"],
@@ -66,13 +64,12 @@ export const portfolio: Project[] = [
   {
     "title": "Trzech Kumpli",
     "excerpt": "Product catalog with blog",
-    "description": `Trzech Kumpli is an award-winning brewery creating craft beers.
-      The website is multilingual, displays all the products and has a blog.
-      I was responsible for the implementation of the website and its maintenance.
-      Project was dropped by other developer at the beginning and I was asked to finish it.
+    "description": `Trzech Kumpli is an award-winning brewery creating craft beers. The website is multilingual, displays all the products and has a blog.
+      
+      I was responsible for the implementation of the website and its maintenance. Project was dropped by other developer at the beginning and I was asked to finish it.
     `,
     "link": "https://trzechkumpli.pl/",
-    "technologies": ["WordPress", "ACF", "CSS", "PHP", "MySQL", "JavaScript"],
+    "technologies": ["WordPress", "ACF", "SCSS", "PHP", "MySQL", "JavaScript"],
     "active": true,
     "galleryImages": [
       "/projects/trzech-1.png",
@@ -89,14 +86,13 @@ export const portfolio: Project[] = [
     "year": 2019,
   },
   {
-    "title": "abagard.pl",
+    "title": "Abagard",
     "excerpt": "Portfolio website and positioning",
-    "description": `Abagard is a local business based in Poznań that provides tiling services.
-      The website was created to present the company and improve its visibility at Google.
-      Due to inflation and the war, the company stopped getting orders.
-      I was responsible for the implementation of the website and SEO actions.
-      Now the company has work planned for a year ahead thanks to my positioning at Google.
-      He acquires customers not through recommendations as before, but from the Internet.
+    "description": `Abagard is a local business based in Poznań that provides tiling services. The website was created to present the company and improve its visibility at Google.
+      
+      Due to inflation and the war, the company stopped getting orders. I was responsible for the implementation of the website and SEO actions.
+      
+      Now the company has work planned for a year ahead thanks to positioning at Google. It acquires customers not through recommendations as before, but from the Internet.
     `,
     "link": "https://abagard.pl",
     "technologies": ["Astro JS", "React", "Tailwind CSS", "SCSS"],
@@ -112,7 +108,7 @@ export const portfolio: Project[] = [
     "type": "non-commercial"
   },
   {
-    "title": "adwokatwysocki.pl",
+    "title": "Adwokat Wysocki",
     "excerpt": "AdwokatWysocki.pl website with SEO focus.",
     "description": "",
     "link": "https://adwokatwysocki.pl",
@@ -129,8 +125,11 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Novavis Group",
-    "excerpt": "Creating a full website with unique features",
-    "description": "Company website for Novavis Group.",
+    "excerpt": "Company website",
+    "description": `Novavis Group works with renewable energy sources. The website was created to present the company, its offer and documents.
+      
+      I was responsible for the implementation of the website. Most enjoyable part of the project was creating the timeline for periodic reports and the leaf on the home page.
+    `,
     "link": "https://novavisgroup.pl/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "MySQL", "JavaScript"],
     "active": true,
@@ -182,7 +181,10 @@ export const portfolio: Project[] = [
   {
     "title": "Vistula",
     "excerpt": "Landing page",
-    "description": "A project for Vistula University.",
+    "description": `A project of landing page for Vistula University. The website was created to promote the university and its offer.
+      
+      I was responsible for the implementation of the website and integration with GetResponse platform.
+    `,
     "link": "https://pultusk.vistula.edu.pl/landingpage/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "MySQL", "JavaScript"],
     "active": true,
@@ -199,8 +201,11 @@ export const portfolio: Project[] = [
   },
   {
     "title": "Glass System",
-    "excerpt": "Website for Academy Asseco company.",
-    "description": "Company website with product catalog.",
+    "excerpt": "Website with product catalog",
+    "description": `Glass System is a manufacturer of glass wall systems with fire protection and soundproofing functions. The website was created to present the company and its products.
+
+      That was my first project in KERRIS. I was responsible for the implementation of the website. That website has multiple cool features all over the place.
+    `,
     "link": "https://glasssystem.com/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "Twig", "MySQL", "JavaScript"],
     "active": true,
@@ -216,9 +221,12 @@ export const portfolio: Project[] = [
     "type": "commercial"
   },
   {
-    "title": "academy.asseco.pl",
-    "excerpt": "Website for Academy Asseco company.",
-    "description": "A project for Academy Asseco company.",
+    "title": "Asseco Academy",
+    "excerpt": "E-commerce with CRM integration",
+    "description": `Asseco is a company specializing in providing technological courses, software, and IT services. The project was to create an e-commerce platform. It's a team effort of several programmers.
+      
+      The website was integrated with a CRM based on Microsoft Dynamics. Despite using WordPress, the website does not use WooCommerce. Shop is based on custom solution. I was responsible for a significant part of the front-end development and integration with the CRM.
+    `,
     "link": "https://academy.asseco.pl/",
     "technologies": ["WordPress", "ACF", "CSS", "PHP", "Twig", "MySQL", "JavaScript"],
     "active": true,

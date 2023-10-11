@@ -105,7 +105,7 @@ const PortfolioContent = () => {
               }
             </ScrollContainer>
             <div className='flex flex-col gap-6 p-6 pt-12 pb-9 md:p-12'>
-              <p className='text-gray-300 text-base md:text-lg m-0 max-w-max md:whitespace-pre-line md:leading-loose'>{activeProject.description}</p>
+              <p className='text-gray-300 text-base md:text-lg m-0 max-w-max lg:max-w-[90%] md:whitespace-pre-line md:leading-normal'>{activeProject.description}</p>
               <a
                 role="button"
                 href={activeProject.link}
