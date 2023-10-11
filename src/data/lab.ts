@@ -10,7 +10,7 @@ export type Lab = {
 export const data: Lab[] = [
   {
     thumbnail: '/lab/dnd-recruitment.png',
-    title: 'D&D skills tree',
+    title: 'RPG skills tree',
     type: 'Demo',
     github: 'https://github.com/frontendkris/front-end-developer-challenge',
     demo: 'https://front-end-developer-challenge-g2mx9qb14-frontendkris.vercel.app/',
