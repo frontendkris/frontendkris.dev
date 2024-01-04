@@ -17,7 +17,7 @@ npm install
 npm run dev
 ```
 
-## Licencja
+## License
 This project is available exclusively for review and learning purposes. Cloning the repository is permitted only for the purpose of viewing the code in a local IDE environment.
 
 Any other use of the code, including modification, distribution, commercial use, or public sharing, is strictly prohibited without express written consent.
