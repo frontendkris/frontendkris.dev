@@ -9,6 +9,13 @@ export type Lab = {
 
 export const data: Lab[] = [
   {
+    thumbnail: '/lab/noo-ma-recruitment-task.gif',
+    title: 'Product Gallery',
+    type: 'Demo',
+    github: 'https://github.com/frontendkris/noo.ma-recruitment-task',
+    demo: 'https://noo-ma-recruitment-task.vercel.app/',
+  },
+  {
     thumbnail: '/lab/dnd-recruitment.png',
     title: 'RPG skills tree',
     type: 'Demo',
