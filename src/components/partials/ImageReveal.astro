@@ -1,15 +1,25 @@
 ---
-  interface Props {
-    src: string;
-    direction: "top" | "bottom";
-    className?: string;
-  }
+import { Image } from "astro:assets";
 
-  const { className, direction = 'top', src } = Astro.props;
+interface Props {
+  src: string;
+  direction: "top" | "bottom";
+  className?: string;
+}
+
+const { className, direction = "top", src } = Astro.props;
 ---
+
 <span class={`image-reveal ${direction} ${className}`}>
   <slot />
-  <img loading="lazy" src={src} class="image-reveal__image" />
+  <Image
+    src={src}
+    inferSize
+    widths={[300, 400]}
+    alt=""
+    class="image-reveal__image"
+    loading="lazy"
+  />
 </span>
 
 <style is:global>

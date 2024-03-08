@@ -9,4 +9,8 @@ export default defineConfig({
   output: "hybrid",
   adapter: vercel(),
   integrations: [tailwind(), react(), icon()],
+  image: {
+    domains: ["frontend.kris"],
+    remotePatterns: [{ protocol: "https" }],
+  },
 });
