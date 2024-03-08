@@ -1,17 +1,21 @@
 ---
-import { Icon } from "astro-icon";
 import Heading from "./partials/Heading.astro";
-
+import { Image, Picture } from "astro:assets";
+import photo from "@/assets/kris.jpg";
 ---
 
 <div class="flex flex-row items-end w-full md:max-w-max">
   <div
     class="w-16 h-16 md:w-20 md:h-20 min-w-max rounded-full bg-gray-300 mr-4 overflow-hidden"
   >
-    <img
-      src="/kris.jpg"
-      alt="Krzysztof Król @frontendkris"
+    <Picture
+      src={photo}
+      width={photo.width}
+      height={photo.height}
+      loading="eager"
+      formats={["avif", "webp", "jpeg"]}
       class="object-cover w-full h-full"
+      alt="Krzysztof Król @frontendkris"
     />
   </div>
   <div class="flex flex-col items-start">

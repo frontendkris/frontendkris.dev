@@ -10,15 +10,23 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.6",
     "@astrojs/react": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/ts-plugin": "^1.5.3",
+    "@astrojs/vercel": "^7.3.5",
+    "@iconify-json/carbon": "^1.1.31",
+    "@iconify-json/mdi": "^1.1.64",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "astro": "^3.0.7",
-    "astro-icon": "^0.8.1",
+    "astro": "^4.4.15",
+    "astro-icon": "latest",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-indiana-drag-scroll": "^2.2.0",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.4.2"
   }
 }

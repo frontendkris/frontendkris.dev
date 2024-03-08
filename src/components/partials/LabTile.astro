@@ -1,40 +1,50 @@
 ---
-import type { Lab } from '../../data/lab';
-import Heading from './Heading.astro';
-import Description from './Description.astro';
-import { Icon } from "astro-icon";
-import { iconClass, linkAttrs } from '../SocialMedia.astro';
+import Heading from "./Heading.astro";
+import { Icon } from "astro-icon/components";
+import { iconClass, linkAttrs } from "../SocialMedia.astro";
+import { Picture } from "astro:assets";
 
-const { thumbnail, title, type, github, codepen, demo } = Astro.props;
+const { thumbnail, title, github, codepen, demo } = Astro.props;
 ---
 
-<div class="
-  flex flex-col gap-2
-">
-  <a href={!!codepen ? codepen : demo} class="flex flex-col items-start justify-start gap-4 hover:text-supernova-500 transition-colors" {...linkAttrs}>
-    <img src={thumbnail} alt={title} class="w-full aspect-square object-cover rounded-lg" loading="lazy" decoding="async" />
+<div class="flex flex-col gap-2">
+  <a
+    href={!!codepen ? codepen : demo}
+    class="flex flex-col items-start justify-start gap-4 hover:text-supernova-500 transition-colors"
+    {...linkAttrs}
+  >
+    <Picture
+      src={thumbnail}
+      alt={`Lab element: ${title}`}
+      loading="lazy"
+      formats={["avif", "webp", "jpeg"]}
+      class={"w-full aspect-square object-cover rounded-lg"}
+      inferSize
+    />
     <Heading size={3} text={title} />
   </a>
   <div>
-    <!-- <Description text={type} className="uppercase" /> -->
     <div class="flex items-center justify-start gap-2">
       {
-        !!github &&
-        <a href={github} {...linkAttrs} class="group">
-          <Icon name="mdi:github" class={iconClass} />
-        </a>
+        !!github && (
+          <a href={github} {...linkAttrs} class="group">
+            <Icon name="mdi:github" class={iconClass} />
+          </a>
+        )
       }
       {
-        !!codepen &&
-        <a href={codepen} {...linkAttrs} class="group">
-          <Icon name="mdi:codepen" class={iconClass} />
-        </a>
+        !!codepen && (
+          <a href={codepen} {...linkAttrs} class="group">
+            <Icon name="mdi:codepen" class={iconClass} />
+          </a>
+        )
       }
       {
-        !!demo &&
-        <a href={demo} {...linkAttrs} class="group">
-          <Icon name="mdi:link" class={iconClass} />
-        </a>
+        !!demo && (
+          <a href={demo} {...linkAttrs} class="group">
+            <Icon name="mdi:link" class={iconClass} />
+          </a>
+        )
       }
     </div>
   </div>
