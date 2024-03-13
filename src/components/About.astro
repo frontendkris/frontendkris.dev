@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 import ImageReveal from "./partials/ImageReveal.astro";
 import SocialMedia from "./SocialMedia.astro";
 import { iconClass } from "./SocialMedia.astro";
-import CodewarsBadge from "./partials/CodewarsBadge.astro";
+import chosenImage from "src/assets/gif/chosen.webp";
 ---
 
 <div class="flex flex-col items-center gap-6 text-gray-300 text-center">
@@ -16,7 +16,7 @@ import CodewarsBadge from "./partials/CodewarsBadge.astro";
     <SocialMedia />
   </div>
   <ImageReveal
-    src="https://media.tenor.com/IRUsEZEZnlsAAAAC/lovemybaldhead-soold-ivegonebald.gif"
+    image={chosenImage}
     direction="bottom"
     className="text-supernova-500"
   >

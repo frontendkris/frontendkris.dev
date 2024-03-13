@@ -15,7 +15,7 @@ const { thumbnail, title, github, codepen, demo } = Astro.props;
   >
     <Picture
       src={thumbnail}
-      alt={`Lab element: ${title}`}
+      alt={`Lab project: ${title}`}
       loading="lazy"
       formats={["avif", "webp", "jpeg"]}
       class={"w-full aspect-square object-cover rounded-lg"}
@@ -27,21 +27,31 @@ const { thumbnail, title, github, codepen, demo } = Astro.props;
     <div class="flex items-center justify-start gap-2">
       {
         !!github && (
-          <a href={github} {...linkAttrs} class="group">
+          <a
+            href={github}
+            {...linkAttrs}
+            class="group"
+            title="GitHub repository"
+          >
             <Icon name="mdi:github" class={iconClass} />
           </a>
         )
       }
       {
         !!codepen && (
-          <a href={codepen} {...linkAttrs} class="group">
+          <a
+            href={codepen}
+            {...linkAttrs}
+            class="group"
+            title="CodePen project"
+          >
             <Icon name="mdi:codepen" class={iconClass} />
           </a>
         )
       }
       {
         !!demo && (
-          <a href={demo} {...linkAttrs} class="group">
+          <a href={demo} {...linkAttrs} class="group" title="Live demo">
             <Icon name="mdi:link" class={iconClass} />
           </a>
         )

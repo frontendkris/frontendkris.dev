@@ -1,24 +1,29 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 
 interface Props {
-  src: string;
+  image: ImageMetadata;
   direction: "top" | "bottom";
   className?: string;
+  alt?: string;
 }
 
-const { className, direction = "top", src } = Astro.props;
+const { className, direction = "top", image, alt = "" } = Astro.props as Props;
 ---
 
 <span class={`image-reveal ${direction} ${className}`}>
   <slot />
-  <Image
-    src={src}
-    inferSize
+  <Picture
+    src={image}
+    width={image.width}
+    height={image.height}
     widths={[300, 400]}
     alt=""
     class="image-reveal__image"
+    formats={["webp"]}
+    fallbackFormat={image.format}
     loading="lazy"
+    decoding="async"
   />
 </span>
 
@@ -31,6 +36,7 @@ const { className, direction = "top", src } = Astro.props;
   .image-reveal .image-reveal__image {
     opacity: 0;
     transition: all 250ms ease;
+    transition-delay: 50ms;
     position: absolute;
     left: 0;
     height: auto;
@@ -49,6 +55,7 @@ const { className, direction = "top", src } = Astro.props;
     transform: translateY(100%);
   }
   .image-reveal:hover .image-reveal__image {
+    display: block;
     opacity: 1;
     filter: drop-shadow(0 1rem 1rem #000);
   }

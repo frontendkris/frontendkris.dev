@@ -4,15 +4,16 @@ import { data } from "../data/lab";
 import type { Lab } from "../data/lab";
 import LabTile from "./partials/LabTile.astro";
 import ImageReveal from "./partials/ImageReveal.astro";
+import elfImage from "src/assets/gif/elf.gif";
 ---
 
 <section>
-  <ImageReveal src="https://media.tenor.com/l4VXUXKwlREAAAAC/stephen-stephen-colbert.gif" direction="top">
+  <ImageReveal image={elfImage} direction="top">
     <Heading size={2} text="Lab" />
   </ImageReveal>
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-x-12 md:gap-y-8">
-    {
-      data.map((lab: Lab) => <LabTile {...lab} />)
-    }
+  <div
+    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-x-12 md:gap-y-8"
+  >
+    {data.map((lab: Lab) => <LabTile {...lab} />)}
   </div>
 </section>

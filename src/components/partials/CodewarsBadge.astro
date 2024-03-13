@@ -1,18 +1,32 @@
 ---
 import { links } from "../../data/links";
 import ImageReveal from "./ImageReveal.astro";
+import gokuImage from "src/assets/gif/goku.webp";
+import vegetaImage from "src/assets/gif/vegeta.gif";
 
 interface Props {
-  size: "small" | "large",
-  className?: string,
-};
+  size: "small" | "large";
+  className?: string;
+}
 
 const { className, size }: Props = Astro.props;
 ---
 
-<a href={links.codewars} target="_blank" rel="nofollow" class={className}>
-  <ImageReveal src="https://media.tenor.com/vTTrRYC_EPIAAAAd/son-goku-kakarott.gif" direction="bottom" className="flex flex-col items-end justify-end text-right">
-    <div class="mr-3 mb-2 italic text-sm md:text-supernova-300">{size == 'large' ? 'Join me on Codewars!' : 'Join me!'}</div>
-    <img src={`${links.codewars}/badges/${size}`} />
+<a
+  href={links.codewars}
+  target="_blank"
+  rel="nofollow"
+  title="Codewars profile"
+  class={className}
+>
+  <ImageReveal
+    image={vegetaImage}
+    direction="bottom"
+    className="flex flex-col items-end justify-end text-right"
+  >
+    <div class="mr-3 mb-2 italic text-sm md:text-supernova-300">
+      {size == "large" ? "Join me on Codewars!" : "Join me!"}
+    </div>
+    <img src={`${links.codewars}/badges/${size}`} alt="Codewars stats" />
   </ImageReveal>
 </a>

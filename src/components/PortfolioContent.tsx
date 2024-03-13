@@ -93,21 +93,24 @@ const PortfolioContent = () => {
               ))}
             </ScrollContainer>
             <ScrollContainer className="animation-slide-left flex flex-nowrap gap-x-4 w-full overflow-x-scroll scroll-smooth gallery scroll-horizontally no-scrollbar px-6 md:px-12">
-              {activeProject.galleryImages.map((image: string) => (
-                <div
-                  key={`${activeProject.title}-${image}`}
-                  className="w-full min-w-full lg:min-w-[80%] h-auto lg:h-96 bg-neutral-950 lg:py-8 aspect-auto rounded-lg"
-                >
-                  <picture>
-                    <img
-                      loading="lazy"
-                      src={image}
-                      alt={activeProject.title}
-                      className="flex items-center justify-center w-full h-full m-auto object-contain rounded"
-                    />
-                  </picture>
-                </div>
-              ))}
+              {activeProject.galleryImages.map(
+                (image: string, index: number) => (
+                  <div
+                    key={`${activeProject.title}-${image}`}
+                    className="w-full min-w-full lg:min-w-[80%] h-auto lg:h-96 bg-neutral-950 lg:py-8 aspect-auto rounded-lg"
+                  >
+                    <picture>
+                      <img
+                        loading={`${index < 2 ? "eager" : "lazy"}`}
+                        decoding={`${index < 2 ? "sync" : "async"}`}
+                        src={image}
+                        alt={`Example image of project: ${activeProject.title}`}
+                        className="flex items-center justify-center w-full h-full m-auto object-contain rounded"
+                      />
+                    </picture>
+                  </div>
+                )
+              )}
             </ScrollContainer>
             <div className="flex flex-col gap-6 p-6 pt-12 pb-9 md:p-12">
               <p className="text-gray-300 text-base md:text-lg m-0 max-w-max lg:max-w-[90%] md:whitespace-pre-line md:leading-normal">
@@ -116,6 +119,7 @@ const PortfolioContent = () => {
               <a
                 role="button"
                 href={activeProject.link}
+                title={`Link to project: ${activeProject.title}`}
                 target="_blank"
                 rel="nofollow"
                 className="

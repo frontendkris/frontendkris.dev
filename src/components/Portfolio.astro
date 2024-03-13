@@ -2,10 +2,11 @@
 import Heading from "./partials/Heading.astro";
 import ImageReveal from "./partials/ImageReveal.astro";
 import PortfolioContent from "./PortfolioContent";
+import dwarfImage from "src/assets/gif/dwarf.gif";
 ---
 
 <section>
-  <ImageReveal src="https://media.tenor.com/zYF1bPnvi6IAAAAC/that-still-only-counts-as-one-lotr.gif" direction="top">
+  <ImageReveal image={dwarfImage} direction="top">
     <Heading size={2} text="Websites Portfolio" />
   </ImageReveal>
   <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
@@ -74,7 +75,7 @@ import PortfolioContent from "./PortfolioContent";
 
   @keyframes slide-left {
     0% {
-      transform:  translateX(80%);
+      transform: translateX(80%);
       opacity: 0;
     }
     25% {
@@ -86,7 +87,6 @@ import PortfolioContent from "./PortfolioContent";
     }
   }
 
-  
   .animation-blur-in {
     animation: 300ms ease forwards blur-in;
   }
@@ -105,5 +105,4 @@ import PortfolioContent from "./PortfolioContent";
   .animation-blur-out {
     animation: 300ms ease forwards blur-out !important;
   }
-
 </style>

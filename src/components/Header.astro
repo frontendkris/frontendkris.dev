@@ -1,17 +1,14 @@
 ---
-import Profile from '../components/Profile.astro';
-import Nav from '../components/Nav.astro';
-import CodewarsBadge from './partials/CodewarsBadge.astro';
-import SocialMedia from './SocialMedia.astro';
-import Description from './partials/Description.astro';
-import About from './About.astro';
+import Profile from "../components/Profile.astro";
+import CodewarsBadge from "./partials/CodewarsBadge.astro";
 ---
+
 <header class="pt-8">
-  <div class="
-    w-full
+  <div
+    class="w-full
     flex items-end justify-between flex-col md:flex-row gap-6 sm:gap-0
-    mb-8
-  ">
+    mb-8"
+  >
     <Profile />
     <CodewarsBadge size="large" className="hidden md:flex" />
   </div>
