@@ -1,5 +1,5 @@
 ---
-import { Picture } from "astro:assets";
+import {Picture} from "astro:assets";
 
 interface Props {
   image: ImageMetadata;
@@ -8,7 +8,7 @@ interface Props {
   alt?: string;
 }
 
-const { className, direction = "top", image, alt = "" } = Astro.props as Props;
+const {className, direction = "top", image, alt = ""} = Astro.props as Props;
 ---
 
 <span class={`image-reveal ${direction} ${className}`}>
@@ -21,7 +21,6 @@ const { className, direction = "top", image, alt = "" } = Astro.props as Props;
     alt=""
     class="image-reveal__image"
     formats={["webp"]}
-    fallbackFormat={image.format}
     loading="lazy"
     decoding="async"
   />
