@@ -1,9 +1,10 @@
 import productGallery from "@/assets/lab/nooma.png";
 import dnd from "@/assets/lab/dnd-recruitment.png";
 import pikachu from "@/assets/lab/pikachu.jpg";
+import cart from "@/assets/lab/xstate-cart-4-fun.png";
 
 export type Lab = {
-  thumbnail: string;
+  thumbnail: ImageMetadata;
   title: string;
   type: "CodePen" | "Demo";
   codepen?: string;
@@ -12,6 +13,13 @@ export type Lab = {
 };
 
 export const data: Lab[] = [
+  {
+    thumbnail: cart,
+    title: "xState cart 4 fun",
+    type: "Demo",
+    github: "https://github.com/frontendkris/xstate-cart-4-fun",
+    demo: "https://xstate-cart-4-fun.vercel.app/",
+  },
   {
     thumbnail: productGallery,
     title: "Product Gallery",
