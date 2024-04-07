@@ -21,6 +21,7 @@ const {className, direction = "top", image, alt = ""} = Astro.props as Props;
     alt=""
     class="image-reveal__image"
     formats={["webp"]}
+    fallbackFormat="webp"
     loading="lazy"
     decoding="async"
   />

@@ -1,15 +1,14 @@
 ---
-import { links } from "../../data/links";
+import {links} from "../../data/links";
 import ImageReveal from "./ImageReveal.astro";
-import gokuImage from "src/assets/gif/goku.webp";
-import vegetaImage from "src/assets/gif/vegeta.gif";
+import vegetaImage from "src/assets/gif/vegeta.webp";
 
 interface Props {
   size: "small" | "large";
   className?: string;
 }
 
-const { className, size }: Props = Astro.props;
+const {className, size}: Props = Astro.props;
 ---
 
 <a
