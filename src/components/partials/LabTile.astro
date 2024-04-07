@@ -52,7 +52,7 @@ const { thumbnail, title, github, codepen, demo } = Astro.props;
       {
         !!demo && (
           <a href={demo} {...linkAttrs} class="group" title="Live demo">
-            <Icon name="mdi:link" class={iconClass} />
+            <Icon name="mdi:external-link" class={iconClass} />
           </a>
         )
       }

@@ -1,5 +1,5 @@
-import type { Project } from "../../data/portfolio";
-import type { MouseEventHandler } from "react";
+import type {Project} from "../../data/portfolio";
+import type {MouseEventHandler} from "react";
 
 export type ProjectTileProps = {
   openProjectPopup: MouseEventHandler<HTMLDivElement>;
@@ -8,7 +8,7 @@ export type ProjectTileProps = {
 
 const ProjectTile = ({
   openProjectPopup,
-  project: { favicon, galleryImages, title, excerpt, company },
+  project: {favicon, galleryImages, title, excerpt, company},
 }: ProjectTileProps) => {
   return (
     <div

@@ -1,8 +1,9 @@
-import { useRef, useState } from "react";
-import type { Project } from "../data/portfolio";
-import { portfolio } from "../data/portfolio";
+import {useRef, useState} from "react";
+import type {Project} from "../data/portfolio";
+import {portfolio} from "../data/portfolio";
 import ProjectTile from "./partials/ProjectTile";
 import ScrollContainer from "react-indiana-drag-scroll";
+import {ExternalLinkIcon} from "./partials/ExternalLinkIcon";
 
 const PortfolioContent = () => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
@@ -35,7 +36,7 @@ const PortfolioContent = () => {
             project={project}
             openProjectPopup={(
               e: React.MouseEvent<HTMLDivElement, MouseEvent>
-            ) => openProjectPopup(e, { ...project })}
+            ) => openProjectPopup(e, {...project})}
           />
         ))}
       {!!activeProject && (
@@ -129,7 +130,8 @@ const PortfolioContent = () => {
                   transition-all shadow-lg
                 "
               >
-                Visit
+                Visit{" "}
+                <ExternalLinkIcon className="ml-2 leading-none w-5 h-5 m-auto" />
               </a>
             </div>
           </div>
