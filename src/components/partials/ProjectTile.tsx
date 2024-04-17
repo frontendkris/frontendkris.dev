@@ -15,7 +15,7 @@ const ProjectTile = ({
       className="flex gap-x-4 cursor-pointer group"
       onClick={openProjectPopup}
     >
-      <div className="w-12 h-12 min-w-max bg-white aspect-square overflow-hidden rounded shadow-lg">
+      <div className="w-12 h-12 min-w-max bg-transparent aspect-square overflow-hidden rounded shadow-lg">
         <img
           src={favicon ? favicon : galleryImages[0]}
           alt="Project cover image"

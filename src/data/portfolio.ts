@@ -8,7 +8,12 @@ export type FrontendTech =
   | "Astro JS"
   | "Svelte"
   | "HTML"
-  | "Twig";
+  | "Twig"
+  | "GROQ"
+  | "GraphQL"
+  | "XState"
+  | "Framer Motion"
+  | "REST";
 export type BackendTech = "Express.js" | "Deno" | "Node.js" | "PHP";
 export type StylingTech =
   | "CSS"
@@ -18,7 +23,7 @@ export type StylingTech =
   | "Material UI"
   | "Daisy UI"
   | "Styled Components";
-export type CMS = "WordPress" | "ACF" | "WooCommerce" | "Sylius";
+export type CMS = "WordPress" | "ACF" | "WooCommerce" | "Sylius" | "Sanity";
 export type Database = "MongoDB" | "MySQL";
 export type Technology =
   | FrontendTech
@@ -42,6 +47,62 @@ export type Project = {
 };
 
 export const portfolio: Project[] = [
+  {
+    title: "Product Adviser App",
+    excerpt: "E-commerce app integrated with Shoper",
+    description: `The "Product Adviser App" is a sophisticated e-commerce application designed to optimize consumer shopping experiences by providing personalized product recommendations. Integrated seamlessly with the Shoper platform through the REST API, this app connects directly to mmcomp.pl, a well-known electronics store. The app aims to assist users in navigating the extensive product catalog efficiently, ensuring they find the best options tailored to their specific needs and preferences.
+
+    The Product Adviser App filters and suggests products that align with user criteria and past shopping behaviors. This level of customization enhances user satisfaction by simplifying the decision-making process, making shopping both quicker and more effective. The integration with Shoper not only facilitates a smooth backend operation but also ensures up-to-date inventory and pricing, which is critical for providing accurate recommendations.`,
+    link: "https://konfigurator.mmcomp.pl/",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "XState",
+      "Tailwind CSS",
+      "Daisy UI",
+      "Framer Motion",
+      "REST",
+    ],
+    active: true,
+    galleryImages: [
+      "/projects/mmcomp-1.png",
+      "/projects/mmcomp-2.png",
+      "/projects/mmcomp-3.png",
+    ],
+    favicon: "/projects/mmcomp-icon.png",
+    type: "commercial",
+    year: 2024,
+  },
+  {
+    title: "St. Michael's Revival",
+    excerpt: "Design and implementation",
+    description: `This portfolio entry highlights the development of a modern, intuitive website for St. Michael the Archangel Parish in Pogorzela, designed to enhance both user experience and administrative efficiency. Utilizing tools like Figma for design and technologies such as Astro, Tailwind CSS, and TypeScript for development, the project successfully shifted from an outdated WordPress system to a more secure and manageable platform. The integration of Sanity.io as a CMS and Vercel for hosting significantly simplified content updates and reduced operational costs.
+
+    Key features of the website include streamlined access to important parish documents, with a user-friendly administrative panel that supports effortless updates. The design, rooted in the parish's history, was meticulously planned in Figma to ensure the site's familiarity and trustworthiness among parishioners.
+    
+    The outcome is a visually appealing and reliable website that stands as a testament to the benefits of modern web development practices. By optimizing performance and reducing maintenance costs, the project not only fulfills the current needs of the parish but also secures its digital presence for the future.`,
+    link: "https://parafiapogorzela.pl/",
+    technologies: [
+      "Astro JS",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Sanity",
+      "GROQ",
+    ],
+    active: true,
+    galleryImages: [
+      "/projects/parafiapogorzela-pl-1.png",
+      "/projects/parafiapogorzela-pl-2.png",
+      "/projects/parafiapogorzela-pl-3.png",
+      "/projects/parafiapogorzela-pl-4.png",
+      "/projects/parafiapogorzela-pl-5.png",
+    ],
+    favicon: "/projects/parafiapogorzela-pl-icon.png",
+    type: "commercial",
+    year: 2024,
+  },
   {
     title: "Agronomist",
     excerpt: "Redesign and maintenance",
