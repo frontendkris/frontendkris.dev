@@ -1,5 +1,5 @@
 {
-	"runtime": "nodejs20.x",
+	"runtime": "nodejs18.x",
 	"handler": "home/frontendkris/www/frontendkris.dev/.vercel/output/_functions/entry.mjs",
 	"launcherType": "Nodejs",
 	"supportsResponseStreaming": true
